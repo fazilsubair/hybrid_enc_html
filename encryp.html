@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <h1>Encryption</h1>
 </head>
 <body>
-    <form action="encryption.php">
-        <input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
-        <input type="submit" name="Submit">
-      </form>
+    <h1>Encryption</h1>
+    <form action="encryption.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" />
+        <input type="submit" name="submit" value="Submit">
+    </form>
 </body>
 </html>
