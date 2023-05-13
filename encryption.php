@@ -30,6 +30,10 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
             echo "File uploaded and encrypted successfully!\n";
             echo "Encrypted file name: " . $file['name'] . "\n";
             echo "Encryption key: " . bin2hex($key) . "\n";
+
+            // Generate a unique download link
+            $downloadLink = 'download.php?file=' . urlencode($destinationFile);
+            echo "Download link: <a href='$downloadLink'>Download Encrypted File</a>\n";
         } else {
             echo "Encryption failed.\n";
         }
