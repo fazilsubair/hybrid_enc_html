@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>Decryption</h1>
+    <title>Image Decryption</title>
 </head>
 <body>
-    <form action="/decryption.php">
-        <label for="enctext">Encrypted text: </label>
-        <input type="text" id="enctext" name="enctext"><br><br>
-        <label for="key">key</label>
-        <input type="text" id="key" name="key"><br><br>
-        <input type="submit" value="Submit">
-      </form>
+    <h1>Image Decryption</h1>
+    <form action="decrypt.php" method="post" enctype="multipart/form-data">
+        <label for="encrypted_image">Select Encrypted Image:</label>
+        <input type="file" name="encrypted_image" id="encrypted_image" accept=".enc" required>
+        <br>
+        <label for="encryption_key">Encryption Key:</label>
+        <input type="text" name="encryption_key" id="encryption_key" placeholder="Encryption Key" required>
+        <br>
+        <label for="private_key">Private Key:</label>
+        <textarea name="private_key" id="private_key" rows="5" required></textarea>
+        <br>
+        <input type="submit" value="Decrypt Image">
+    </form>
 </body>
 </html>

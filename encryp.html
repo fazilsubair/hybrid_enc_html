@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Encryption</h1>
-    <form action="encryption.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" />
-        <input type="submit" name="submit" value="Submit">
+    <form action="encrypt.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <input type="submit" value="Encrypt Image">
     </form>
 </body>
 </html>
